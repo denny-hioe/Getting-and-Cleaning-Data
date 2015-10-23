@@ -40,4 +40,4 @@ dat <- dat[,c(1,3:dim(dat)[2])]
 dat <- dat %>% group_by(subject.ID,activity.description) %>% summarise_each(funs(mean))
 dat <- as.data.frame(dat)
 
-write.table(dat, file = "output_analysis.txt")
+write.table(dat, file = "output_analysis.txt", row.names = FALSE)
